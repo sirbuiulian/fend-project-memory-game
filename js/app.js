@@ -98,17 +98,17 @@ function removeClasses() {
 
 function updateMoves() {
     let movess = document.querySelectorAll('.moves');
-    moves++;
+
     for( let move of movess) {
-        move.innerText = moves++;
+        move.innerText += 1;
     }
 
     if (moves === 1) {
-        $('#movesText').text("Move");
+        $('.movesText').text("Move");
     } else {
-        $('#movesText').text("Moves");
+        $('.movesText').text("Moves");
     }
-    $('#moves').text(moves.toString());
+    $('.moves').text(moves.toString());
 
     if (moves > 0 && moves < 16) {
         starRating = starRating;
